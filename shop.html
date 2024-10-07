@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shopping Website - Home</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FDE0E6; /* Baby Pink Background */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 50px; /* Space between the sections */
+        }
+
+        .men, .women {
+            width: 400px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+        }
+
+        .men {
+            background-image: url('https://images.pexels.com/photos/6405066/pexels-photo-6405066.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load');
+        }
+
+        .women {
+            background-image: url('https://images.pexels.com/photos/27750569/pexels-photo-27750569/free-photo-of-model-in-black-tube-top-and-leggings-holding-her-hat.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load');
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background-color: #D81B60; /* Dark Pink Button */
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #B0003A; /* Darker Pink on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Style</h1>
+        <div class="products">
+            <div class="men">
+                <a href="men.html" class="btn">Men</a>
+                
+            </div>
+            <div class="women">
+                <a href="women.html" class="btn">Women</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shopping Website - Celebration Popup </title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FDE0E6; /* Baby Pink Background */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Black overlay with opacity */
+            z-index: 1000;
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s, opacity 0.5s ease;
+        }
+
+        .popup.hidden {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup-content h2 {
+            font-size: 36px;
+            color: #D81B60; /* Dark Pink */
+            margin-bottom: 10px;
+        }
+
+        .popup-content p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background-color: #D81B60; /* Dark Pink Button */
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #B0003A; /* Darker Pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Celebration Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Great Indian Sale!</h2>
+            <p>Celebrate with amazing discounts and offers!</p>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+        <h1>Welcome to Our Shopping Website!</h1>
+        <a href="shop.html" class="btn">Shop Now</a>
+    </div>
+
+    <script>
+        // JavaScript to hide the popup after 3 seconds
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('popup').classList.add('hidden');
+            }, 3000); // 3000 ms = 3 seconds
+        };
+    </script>
+</body>
+</html>
